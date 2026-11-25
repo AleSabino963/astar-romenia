@@ -1,1 +1,4 @@
-# Astar-romenia Prova Eng. de Software
+Busca A* de Arad a Bucareste (Russell & Norvig, cap. 3),
+feita em 6 fases na disciplina Engenharia de Software.
+
+Aluno: Alexandre Vieira Sabino

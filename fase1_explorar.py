@@ -40,3 +40,14 @@ print('Número de estradas de cada cidade:')
 for cidade in mapa_romenia: #Laço de repetição que percorre o dicionário mapa_romenia inteiro.
     quantidade = len(mapa_romenia[cidade]) #Calcula o número de estradas para cada cidade.
     print(f'  {cidade:<15} {quantidade} estrada(s)') #Lista cada resultado do laço de repetição, alinhando tudo à esquerda.
+
+
+# ----- PASSO 7: consultar a heurística ----
+print() #Pular linha.
+print('h(Arad) =', heuristica_bucareste['Arad'], 'km em linha reta até Bucareste') #Mostra o valor da heurística de Arad até Bucareste.
+print('Para cada vizinho de Arad: custo da estrada e h(vizinho)') #Mostra o título da lista.
+for vizinho, custo in mapa_romenia['Arad']: #Laço de repetição que percorre a lista de tuplas vizinhos_arad, desempacotando cada tupla em duas variáveis respectivamente: vizinho(nome 0) e custo(distancia 1).
+    h = heuristica_bucareste[vizinho] #Adiciona o valor da heurística de cada vizinho para a variável h.
+    print(f'  {vizinho:<10} estrada = {custo:>3} km   h = {h:>3} km') #Lista cada resultado do laço de repetição, organizando o texto para exibição.
+
+
